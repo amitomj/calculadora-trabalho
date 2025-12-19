@@ -16,22 +16,24 @@
         color: #f8fafc;
         margin: 0;
       }
-      /* Custom scrollbar for dark theme */
+      /* Scrollbar personalizada para o tema escuro */
       ::-webkit-scrollbar { width: 8px; }
       ::-webkit-scrollbar-track { background: #0a101f; }
       ::-webkit-scrollbar-thumb { background: #1c273d; border-radius: 4px; }
       ::-webkit-scrollbar-thumb:hover { background: #242f45; }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/"
-  }
-}
-</script>
-</head>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.3.1",
+        "react/": "https://esm.sh/react@18.3.1/",
+        "react-dom": "https://esm.sh/react-dom@18.3.1",
+        "react-dom/": "https://esm.sh/react-dom@18.3.1/",
+        "react-dom/client": "https://esm.sh/react-dom@18.3.1/client"
+      }
+    }
+    </script>
+  </head>
   <body class="bg-[#0a101f] text-slate-100">
     <div id="root"></div>
   </body>
