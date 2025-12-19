@@ -1,0 +1,5 @@
+{
+  "name": "LaborCalc Portugal",
+  "description": "Calculadora abrangente de leis laborais portuguesas para valor-hora, trabalho suplementar, noturno e isenção de horário, com suporte a personalização de taxas.",
+  "requestFramePermissions": []
+}
