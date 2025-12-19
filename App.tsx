@@ -74,11 +74,12 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a101f] text-slate-100 flex flex-col font-sans selection:bg-indigo-500/30">
+    <div className="min-h-screen bg-[#0a101f] text-slate-100 flex flex-col font-sans selection:bg-indigo-500/30 overflow-x-hidden">
       {/* Header Section */}
-      <header className="pt-16 pb-12 text-center px-4">
-        <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">Calculadora: direito do trabalho</h1>
-        <p className="text-slate-400 text-lg md:text-xl font-medium max-w-2xl mx-auto">
+      <header className="pt-16 pb-12 text-center px-4 relative">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-64 bg-indigo-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+        <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight text-white relative z-10">Calculadora: direito do trabalho</h1>
+        <p className="text-slate-400 text-lg md:text-xl font-medium max-w-2xl mx-auto relative z-10">
           Portal de Ferramentas Laborais (Portugal)
         </p>
       </header>
