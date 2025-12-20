@@ -74,7 +74,7 @@ const SettingsPanel: React.FC<Props> = ({ settings, onSettingsChange, onReset })
         <section>
           <div className="flex items-center gap-4 mb-8">
              <div className="h-px bg-slate-800 flex-1"></div>
-             <h3 className="text-[10px] font-black text-slate-500 uppercase tracking-[0.3em]">Extensão > 100 Horas</h3>
+             <h3 className="text-[10px] font-black text-slate-500 uppercase tracking-[0.3em]">Extensão &gt; 100 Horas</h3>
              <div className="h-px bg-slate-800 flex-1"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
