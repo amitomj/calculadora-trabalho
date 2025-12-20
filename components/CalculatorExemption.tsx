@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Settings } from '../types';
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const CalculatorExemption: React.FC<Props> = ({ hourlyRate, settings }) => {
-  const [regime, setRegime] = useState<'daily' | 'weekly'>('daily');
+  const [regime, setRegime] = React.useState<'daily' | 'weekly'>('daily');
 
   const increase = settings.exemption / 100;
   const unitValue = hourlyRate * (1 + increase);
@@ -37,11 +37,10 @@ const CalculatorExemption: React.FC<Props> = ({ hourlyRate, settings }) => {
                    : 'border-[#242f45] bg-[#0a101f] hover:bg-[#111a2e]'
                 }`}
              >
-                <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center justify-between">
                    <span className="text-lg font-bold text-white">1 Hora por Dia</span>
                    <div className={`w-3 h-3 rounded-full transition-all ${regime === 'daily' ? 'bg-blue-500 scale-125' : 'bg-slate-800'}`}></div>
                 </div>
-                <p className="text-xs text-slate-400 font-medium leading-relaxed">Art. 219º CT - Regime padrão para cargos de confiança ou direcção.</p>
              </button>
 
              <button
@@ -52,11 +51,10 @@ const CalculatorExemption: React.FC<Props> = ({ hourlyRate, settings }) => {
                    : 'border-[#242f45] bg-[#0a101f] hover:bg-[#111a2e]'
                 }`}
              >
-                <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center justify-between">
                    <span className="text-lg font-bold text-white">2 Horas por Semana</span>
                    <div className={`w-3 h-3 rounded-full transition-all ${regime === 'weekly' ? 'bg-blue-500 scale-125' : 'bg-slate-800'}`}></div>
                 </div>
-                <p className="text-xs text-slate-400 font-medium leading-relaxed">Manutenção do período normal de trabalho semanal.</p>
              </button>
           </div>
         </div>
