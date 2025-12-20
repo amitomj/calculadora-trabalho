@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Settings } from '../types';
 
@@ -78,7 +77,7 @@ const CalculatorExemption: React.FC<Props> = ({ hourlyRate, settings }) => {
            
            <div className="p-5 bg-blue-500/5 border border-blue-500/20 rounded-2xl">
               <p className="text-xs text-blue-300 font-medium leading-relaxed italic">
-                Nota: A isenção de horário implica uma retribuição especial não inferior à remuneração correspondente a uma hora de trabalho suplementar por dia.
+                Nota: A isenção de horário implica uma retribuição especial não inferior à remuneração correspondente a uma hora de trabalho suplementar por dia, ou duas horas de trabalho suplementar por semana quando não implica alteração do período de trabalho.
               </p>
            </div>
         </div>
