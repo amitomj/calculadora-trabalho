@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Settings } from '../types';
+import { Settings } from '../types.ts';
 
 interface Props {
   settings: Settings;
@@ -10,8 +9,17 @@ interface Props {
 
 const SettingsPanel: React.FC<Props> = ({ settings, onSettingsChange, onReset }) => {
   const handleChange = (field: keyof Settings, value: string) => {
-    const numValue = parseFloat(value) || 0;
-    onSettingsChange({ ...settings, [field]: numValue });
+    // Permite string vazia para melhor UX ao limpar o input
+    if (value === '' || value === '-' || value === '.') {
+      onSettingsChange({ ...settings, [field]: 0 });
+      return;
+    }
+    
+    const numValue = parseFloat(value);
+    // Só atualiza se for um número válido
+    if (!isNaN(numValue)) {
+      onSettingsChange({ ...settings, [field]: numValue });
+    }
   };
 
   const Field: React.FC<{ label: string; field: keyof Settings }> = ({ label, field }) => (
