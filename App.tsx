@@ -1,12 +1,11 @@
-
 import React, { useState, useMemo } from 'react';
-import { CalculatorTab, Settings, UserContext } from './types';
-import { DEFAULT_SETTINGS, DEFAULT_USER_CONTEXT } from './constants';
-import CalculatorHourlyRate from './components/CalculatorHourlyRate';
-import CalculatorOvertime from './components/CalculatorOvertime';
-import CalculatorNightWork from './components/CalculatorNightWork';
-import CalculatorExemption from './components/CalculatorExemption';
-import SettingsPanel from './components/SettingsPanel';
+import { CalculatorTab, Settings, UserContext } from './types.ts';
+import { DEFAULT_SETTINGS, DEFAULT_USER_CONTEXT } from './constants.ts';
+import CalculatorHourlyRate from './components/CalculatorHourlyRate.tsx';
+import CalculatorOvertime from './components/CalculatorOvertime.tsx';
+import CalculatorNightWork from './components/CalculatorNightWork.tsx';
+import CalculatorExemption from './components/CalculatorExemption.tsx';
+import SettingsPanel from './components/SettingsPanel.tsx';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<CalculatorTab>(CalculatorTab.DASHBOARD);
