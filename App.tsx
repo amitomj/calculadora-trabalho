@@ -77,9 +77,6 @@ const App: React.FC = () => {
       {/* Header Section */}
       <header className="pt-16 pb-12 text-center px-4">
         <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">Calculadora: direito do trabalho</h1>
-        <p className="text-slate-400 text-lg md:text-xl font-medium max-w-2xl mx-auto">
-          Portal de Ferramentas Laborais (Portugal)
-        </p>
       </header>
 
       <main className="flex-1 max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-20">
@@ -154,11 +151,6 @@ const App: React.FC = () => {
           </div>
         )}
       </main>
-
-      {/* Footer */}
-      <footer className="py-12 border-t border-[#1a2333] text-center text-slate-500">
-        <p className="text-xs uppercase tracking-widest font-bold">Portugal • Cálculo de Retribuições Laborais</p>
-      </footer>
     </div>
   );
 };
